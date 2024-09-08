@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <header>
+        <ul>
+            <img src="./img/Logo.png" alt="logo" width="10%" id="logo"> Design by Kay
+        </ul>
+        <ul>
+            <li>Home</li>
+            <li>Order Now</li>
+            <li>Contact us</li>
+            <li>About</li>
+        </ul>
+    </header>
+    <section>
+
+        <div class="conat">
+            <div class="pizza">
+                <img src="./img/pizza1.png" alt="" id="pizza1">
+                <img src="./img/pizza2.png" alt="" id="pizza2">
+                <img src="./img/pizza3.png" alt="" id="pizza3">
+                <img src="./img/pizza4.png" alt="" id="pizza4">
+                <img src="./img/pizza5.png" alt="" id="pizza5">
+            </div>
+            <div class="card">
+                <h2 id="pizaname">MAST MASALA PIZZA</h2>
+                <p id="pizzacontent"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur consectetur rerum hic quae
+                    nihil quas maiores. Sed temporibus fuga reprehenderit, unde iusto, perferendis quasi repellendus
+                    nulla delectus doloribus eaque! Error, perspiciatis quibusdam temporibus a possimus unde asperiores,
+                    aliquid vel aperiam commodi odit corrupti atque fugit hic impedit ad quia quasi?</p>
+                <br>
+                <a href="#">Contact</a>
+                <a href="#">Buy Now</a>
+            </div>
+            <img src="./img/New folder/greenleaf1 - Copy.png" alt="" width="10%" id="patti1">
+            <img src="./img/New folder/greenleaf1 - Copy (2).png" alt="" width="10%" id="patti2">
+            <img src="./img/New folder/greenleaf1 - Copy (3).png" alt="" width="10%" id="patti3">
+            <a href="#" id="nextbtn"><i class="fa fa-space-shuttle"></i></a>
+        </div>
+
+    </section>
+
+    <section class="section2">
+        <div class="main">
+            <h1 style="color: rgb(114, 114, 114);">OUR MENU</h1>
+            <div class="scrolling">
+                <div class="data">
+                    <h2>Mast Massala Pizza</h2>
+                    <p>Lorem ipsum dolor sit amet never sit around and wait for someoneconsectetur adipisicing elit. Incidunt, quae?</p>
+                    <h3>Rs. 199/-</h3>
+                </div>
+                <div class="data">
+                    <h2>Fast Pizza</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, quae?</p>
+                    <h3>Rs. 199/-</h3>
+                </div>
+                <div class="data">
+                    <h2>Merto Pizza</h2>
+                    <p>Lorem ipsum dolor sit amet consectetursurround yourself with pizza,  adipisicing elit. Incidunt, quae?</p>
+                    <h3>Rs. 199/-</h3>
+                </div>
+                <div class="data">
+                    <h2>Light Pizza</h2>
+                    <p>but first, pizza. Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, quae?</p>
+                    <h3>Rs. 199/-</h3>
+                </div>
+                <div class="data">
+                    <h2>waao Pizza</h2>
+                    <p>they're delivering a pizza Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, quae?</p>
+                    <h3>Rs. 199/-</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        let pizza1 = document.getElementById("pizza1")
+        let pizza2 = document.getElementById("pizza2")
+        let pizza3 = document.getElementById("pizza3")
+        let pizza4 = document.getElementById("pizza4")
+        let pizza5 = document.getElementById("pizza5")
+        let patti1 = document.getElementById("patti1")
+        let patti2 = document.getElementById("patti2")
+        let patti3 = document.getElementById("patti3")
+        let conat = document.querySelectorAll(".conat")
+        let pizza = document.querySelectorAll(".pizza")
+        let pizaname = document.getElementById("pizaname")
+        let pizzacontent = document.getElementById("pizzacontent")
+        let y = 0;
+        let nextbtn = document.getElementById("nextbtn")
+        let data1 = document.querySelectorAll(".data")
+        console.log(data1)
+
+        
+
+        nextbtn.addEventListener("click", function(){
+            patti1.style.rotate = y * 129 + "deg"
+            patti2.style.rotate = y * 229 + "deg"
+            patti3.style.rotate = y * 100 + "deg"
+            y++
+            if(y===1){
+                pizza1.style.marginLeft = -680+"px"
+                pizza1.style.scale = 0;
+                pizza1.style.rotate = 360+"deg";
+                pizza2.style.scale = 1;
+                pizza2.style.rotate = 160+"deg";                
+
+                data1[0].style.color = "black"
+                data1[0].style.scale = .7;
+                data1[0].style.flexBasis  = 50+"%";
+
+                data1[1].style.color = "rgba(255, 68, 0, 0.824)"
+                data1[1].style.scale = 1.2;
+                data1[1].style.flexBasis  = 80+"%";
+                pizaname.innerHTML = "FAST PIZZA "
+                pizzacontent.innerHTML = "Pizza is clearly one of the most beloved foods on Instagram. It photographs well and there it can be made in infinite varieties But don’t just depend on those beauty shots or slow-mo cheese pulls to get attention to your Instagram posts. You need a snappy caption to go with that gooey goodness."
+                
+
+            }else if(y===2){
+                pizza2.style.marginLeft = -680+"px"
+                pizza2.style.scale = 0; 
+                pizza2.style.rotate = 360+"deg"
+                pizza3.style.scale = 1;    
+                pizza3.style.rotate = 160+"deg"
+                pizza1.style.marginLeft = 0;
+                
+                
+                data1[1].style.color = "black"
+                data1[1].style.scale = .7;
+                data1[1].style.flexBasis  = 50+"%";
+
+                data1[2].style.color = "rgba(255, 68, 0, 0.824)"
+                data1[2].style.scale = 1.2;
+                data1[2].style.flexBasis  = 80+"%";
+                pizaname.innerHTML = "MERTO PIZZA"
+                pizzacontent.innerHTML = " I know it can get tedious, trying to think of something clever to say on every single post. Pizza is clearly one of the most beloved foods on Instagram. It photographs well and there it can be made in infinite varieties But don’t just depend on those beauty shots or slow-mo cheese pulls to get attention to your Instagram posts. You need a snappy caption to go with that gooey goodness."
+            }
+            else if(y===3){
+                pizza3.style.marginLeft = -680+"px"
+                pizza4.style.scale = 1;  
+                pizza4.style.rotate = 180+"deg" 
+                pizza2.style.marginLeft = 0;
+                pizza3.style.scale = 0;    
+                pizza3.style.rotate = 360+"deg"
+                
+                data1[2].style.color = "black"
+                data1[2].style.scale = .7;
+                data1[2].style.flexBasis  = 50+"%";
+
+                data1[3].style.color = "rgba(255, 68, 0, 0.824)"
+                data1[3].style.scale = 1.2;
+                data1[3].style.flexBasis  = 80+"%";
+
+                pizaname.innerHTML = "LIGHT PIZZA"
+                pizzacontent.innerHTML = " Pizza is clearly one of the most beloved foods on Instagram. I know it can get tedious, trying to think of something clever to say on every single post. Pizza is clearly one of the most beloved foods on Instagram. It photographs well and there it can be made in infinite varieties But don’t just depend on those beauty shots or slow-mo cheese pulls to get attention to your Instagram posts. You need a snappy caption to go with that gooey goodness."
+            }
+            else if(y===4){
+                pizza4.style.marginLeft = -680+"px"
+                pizza5.style.scale = 1; 
+                pizza5.style.rotate = 160+"deg"
+                pizza3.style.marginLeft = 0;
+                pizza4.style.scale = 0;  
+                pizza4.style.rotate = 360+"deg"   
+
+                data1[3].style.color = "black"
+                data1[3].style.scale = .7;
+                data1[3].style.flexBasis  = 50+"%";
+
+                data1[4].style.color = "rgba(255, 68, 0, 0.824)"
+                data1[4].style.scale = 1.2;
+                data1[4].style.flexBasis  = 80+"%";  
+                
+                pizaname.innerHTML = "WAAO PIZZA"
+                pizzacontent.innerHTML = " Pizza is clearly one of the most beloved foods on Instagram. I know it can get tedious, trying to think of something clever to say on every single post. <br> Pizza is clearly one of the most beloved foods on Instagram. It photographs well and there it can be made in infinite varieties But do not just depend on those beauty shots or slow-mo cheese pulls to get attention to your Instagram posts. You need a snappy caption to go with that gooey goodness."
+            }else if(y===5){
+                pizza5.style.marginLeft = -680+"px"
+                pizza5.style.scale = 0;
+                pizza5.style.rotate = 360+"deg"
+                pizza1.style.marginLeft = 0;
+                pizza1.style.scale = 1;
+                pizza1.style.rotate = 0+"deg"
+
+                data1[4].style.color = "black"
+                data1[4].style.scale = .7;
+                data1[4].style.flexBasis  = 50+"%";
+
+                data1[5].style.color = "rgba(255, 68, 0, 0.824)"
+                data1[5].style.scale = 1.2;
+                data1[5].style.flexBasis  = 80+"%";  
+                
+            }else{
+                location.reload()                
+            }
+
+        })
+
+
+        
+
+       
+
+
+        let x = 0;
+
+
+        window.addEventListener("wheel", function(e){
+            let scrollvalue = e.deltaY;
+            
+            let xscroll = scrollvalue + x;
+            x++    
+            console.log(x)  
+            patti1.style.rotate = x * 29 + "deg"
+            patti2.style.rotate = x * 9 + "deg"
+            patti3.style.rotate = x * 17 + "deg"
+        
+
+            if(x <= 6){
+                pizza1.style.marginLeft = -680+"px"
+                pizza1.style.rotate = 360+"deg";
+                pizza2.style.scale = 1;
+                pizza2.style.rotate = 160+"deg";                
+
+                data1[0].style.color = "black"
+                data1[0].style.scale = .7;
+                data1[0].style.flexBasis  = 50+"%";
+
+                data1[1].style.color = "rgba(255, 68, 0, 0.824)"
+                data1[1].style.scale = 1.2;
+                data1[1].style.flexBasis  = 80+"%";
+                pizaname.innerHTML = "FAST PIZZA"
+                pizzacontent.innerHTML = "Pizza is clearly one of the most beloved foods on Instagram. It photographs well and there it can be made in infinite varieties But don’t just depend on those beauty shots or slow-mo cheese pulls to get attention to your Instagram posts. You need a snappy caption to go with that gooey goodness."
+                
+
+            }else if(x <= 12){
+                pizza2.style.marginLeft = -680+"px"
+                pizza2.style.rotate = 360+"deg"
+                pizza3.style.scale = 1;    
+                pizza3.style.rotate = 160+"deg"
+                // pizza1.style.marginLeft = 0;
+                
+                
+                data1[1].style.color = "black"
+                data1[1].style.scale = .7;
+                data1[1].style.flexBasis  = 50+"%";
+
+                data1[2].style.color = "rgba(255, 68, 0, 0.824)"
+                data1[2].style.scale = 1.2;
+                data1[2].style.flexBasis  = 80+"%";
+                pizaname.innerHTML = "MERTO PIZZA"
+                pizzacontent.innerHTML = " I know it can get tedious, trying to think of something clever to say on every single post. Pizza is clearly one of the most beloved foods on Instagram. It photographs well and there it can be made in infinite varieties But don’t just depend on those beauty shots or slow-mo cheese pulls to get attention to your Instagram posts. You need a snappy caption to go with that gooey goodness."
+            }
+            else if(x <= 18){
+                pizza3.style.marginLeft = -680+"px"
+                pizza4.style.scale = 1;  
+                pizza4.style.rotate = 180+"deg" 
+                // pizza2.style.marginLeft = 0;
+                // pizza3.style.scale = 0;    
+                pizza3.style.rotate = 360+"deg"
+                
+                data1[2].style.color = "black"
+                data1[2].style.scale = .7;
+                data1[2].style.flexBasis  = 50+"%";
+
+                data1[3].style.color = "rgba(255, 68, 0, 0.824)"
+                data1[3].style.scale = 1.2;
+                data1[3].style.flexBasis  = 80+"%";
+
+                pizaname.innerHTML = "LIGHT PIZZA"
+                pizzacontent.innerHTML = " Pizza is clearly one of the most beloved foods on Instagram. I know it can get tedious, trying to think of something clever to say on every single post. Pizza is clearly one of the most beloved foods on Instagram. It photographs well and there it can be made in infinite varieties But don’t just depend on those beauty shots or slow-mo cheese pulls to get attention to your Instagram posts. You need a snappy caption to go with that gooey goodness."
+            }
+            else if(x <= 24){
+                pizza4.style.marginLeft = -680+"px"
+                pizza5.style.scale = 1; 
+                pizza5.style.rotate = 160+"deg"
+                // pizza3.style.marginLeft = 0;
+                // pizza4.style.scale = 0;  
+                pizza4.style.rotate = 360+"deg"   
+
+                data1[3].style.color = "black"
+                data1[3].style.scale = .7;
+                data1[3].style.flexBasis  = 50+"%";
+
+                data1[4].style.color = "rgba(255, 68, 0, 0.824)"
+                data1[4].style.scale = 1.2;
+                data1[4].style.flexBasis  = 80+"%";  
+                
+                pizaname.innerHTML = "WAAO PIZZA"
+                pizzacontent.innerHTML = " Pizza is clearly one of the most beloved foods on Instagram. I know it can get tedious, trying to think of something clever to say on every single post. <br> Pizza is clearly one of the most beloved foods on Instagram. It photographs well and there it can be made in infinite varieties But do not just depend on those beauty shots or slow-mo cheese pulls to get attention to your Instagram posts. You need a snappy caption to go with that gooey goodness."
+            }else if(x <= 30){
+                pizza5.style.marginLeft = -680+"px"
+                // pizza5.style.scale = 0;
+                pizza5.style.rotate = 360+"deg"
+                pizza1.style.marginLeft = 0;
+                pizza1.style.scale = 1;
+                pizza1.style.rotate = 0+"deg"
+                data1[0].style.color = "rgba(255, 68, 0, 0.824)"
+                data1[0].style.scale = 1.2;
+                data1[0].style.flexBasis  = 80+"%";
+
+                data1[4].style.color = "black"
+                data1[4].style.scale = .7;
+                data1[4].style.flexBasis  = 50+"%";
+
+                data1[5].style.color = "rgba(255, 68, 0, 0.824)"
+                data1[5].style.scale = 1.2;
+                data1[5].style.flexBasis  = 80+"%";  
+                
+            }else{
+                location.reload()                
+                
+            }
+
+        })
+
+    </script>
+
+</body>
+
+</html>

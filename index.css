@@ -1,0 +1,268 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10000;
+    box-shadow: 2px 3px 6px grey;
+    background-color: rgba(255, 68, 0, 0.548);
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    list-style: none;
+    margin-left: 20px;
+    padding: 6px 15px;
+    /* background-color: orangered; */
+    color: black;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+header ul li:hover{
+    background-color: black;
+    color: #fff;
+}
+header ul img{
+    animation: rotat 5s ease infinite;
+}
+@keyframes rotat {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(100deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+#logo{
+    position: relative;
+    width: 10%;
+}
+section{
+    width: 100%;
+    /* background-color: aquamarine; */
+}
+
+.conta{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.pizza{
+    flex-basis: 50%;
+    width: 100%;
+    /* background-color: aqua; */
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    left: 10%;    
+    top: 15%;
+}
+img{
+    position: absolute;
+    width: 45%;
+    justify-content: center;
+    align-items: center;
+    transition: 1s all ease;
+    pointer-events: none;
+    filter: drop-shadow(0px 0px 9px grey);
+    animation: rotate 5s infinite;
+}
+#patti1{
+    width: 10%;
+    top: 20%;
+    left: 20%;
+}
+#patti2{
+    width: 10%;
+    left: 39%;
+    top: 37%;
+}
+#patti3{
+    width: 10%;   
+    top: 32%; 
+    left: 13%;
+}
+/* @keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }    
+    50%{
+        transform: rotate(360deg);
+    }
+} */
+.card{
+    position: absolute;
+    width: 37%;
+    height: 60vh;
+    flex-basis: 40%;
+    top: 14%;
+    left: 55%;
+    padding: 10px 30px;
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.441), inset 20px 20px 60px rgba(255, 255, 255, 0.651);
+    border-radius: 9px;
+    transition: all 1s ease;
+}
+.card >a{
+    text-decoration: none;
+    background-color: orangered;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 8px;
+    margin-left: 10px;
+    transition: all 1s ease;
+}
+.card>a:hover{
+    background-color: black;
+}
+
+#nextbtn:active{
+    background-color: black;
+}
+.card>h2{
+    padding: 15px 0px;
+    transition: all 1s ease;
+}
+.card>p{
+    margin-bottom: 15px;
+    height: 25vh;
+    transition: all 1s ease;
+}
+#pizaname{
+    color: rgba(88, 87, 87, 0.927);
+    transition: all 2s ease;
+}
+#pizzacontent{
+    color: rgb(114, 114, 114);
+   transition: all 2s ease;
+}
+.conat>a{
+    position: relative;
+    text-decoration: none;
+    left: 92%;
+    top: 62vh;
+    background-color: tomato;
+    color: white;
+    padding: 10px 35px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.section2{
+    width: 100%;
+    height: 50vh;
+    background-color: white;
+    position: relative;
+    top: 60vh;
+    z-index: 500;
+}
+.main{
+    width: 100%;
+    height: 50vh;
+    background-color: rgba(128, 128, 128, 0.457);
+}
+.main>h1{
+    text-align: center;
+    font-size: 4.6rem;
+}
+.scrolling{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 10px 0px;
+    transition: all 1s ease;
+}
+.data{
+    transition: all 1s ease;
+}
+.data{
+    scale: .7;
+}
+.data:nth-child(1){
+    scale: 1.2;
+    padding: 10px 60px;
+    flex-basis: 100%;
+    color: rgba(255, 68, 0, 0.824);
+    left: 100px;    
+    /* background-color: white; */
+}
+.data>h2{
+    padding: 5px 0px;
+}
+.data>h3{
+    padding: 5px 0px;
+    color: rgb(10, 5, 44)
+}
+.data>p{
+    color: rgb(59, 59, 59);
+}
+/* .data::after{
+    content: "";
+    width: 10%;
+    height: 22px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+} */
+#pizza1{
+    z-index: 160;
+}
+#pizza2{
+     scale: 0;
+     z-index: 150;
+}
+#pizza3{
+    scale: 0;
+    z-index: 140;
+}
+#pizza4{
+    scale: 0;
+    z-index: 130;
+}
+#pizza5{
+    scale: 0;
+    z-index: 120;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    header ul{
+        display: none;
+    }
+    header::after{
+        content: "Contact to Mr. Kay , (this website not displayd in mobile view";
+        display: inline-block;
+        position: absolute;
+        top: 100px;
+    }
+    section{
+display: none;
+    }
+  }
